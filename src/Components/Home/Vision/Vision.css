@@ -1,0 +1,144 @@
+.vision {
+  padding: 3rem calc((100vw - 1300px) / 2);
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  display: flex;
+}
+
+.vision__left {
+  flex: 0.55;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.4;
+  order: 1;
+}
+
+.vision__head {
+  display: flex;
+  margin-bottom: 1rem;
+  /* font-size: clamp(1.5rem, 6vw, 2rem); */
+}
+
+.vision__left__our {
+  color: white;
+  font-size: 5rem;
+}
+
+.vision__left__vision {
+  background-color: #d96ff3;
+  background-image: linear-gradient(45deg, #874a96, #ff95f1);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+.vision__body {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.vision__right {
+  flex: 0.45;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+}
+
+.vision__right > img {
+  padding-top: 1rem;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .vision {
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+  }
+
+  .vision__head {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vision__left {
+    flex: 1;
+    order: 2;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .vision__head > h1 {
+    font-size: 65px;
+  }
+
+  /* .vision__left__our {
+    font-size: 60px;
+  }
+
+  .vision__left__vision {
+    font-size: 60px;
+  } */
+
+  .vision__right {
+    flex: 1;
+    order: 1;
+  }
+
+  .vision__body {
+    font-size: 40px;
+  }
+
+  .vision__right > img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .vision__right > img {
+    width: 60%;
+    height: 70%;
+  }
+
+  .vision__left__our {
+    font-size: 3rem;
+  }
+
+  .vision__left__vision {
+    font-size: 3rem;
+  }
+
+  .vision__body {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .vision__right > img {
+    width: 60%;
+    height: 70%;
+  }
+
+  .vision__left__our {
+    font-size: 2rem;
+  }
+
+  .vision__left__vision {
+    font-size: 2rem;
+  }
+
+  .vision__body {
+    font-size: 1rem;
+  }
+}

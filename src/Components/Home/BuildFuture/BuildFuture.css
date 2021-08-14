@@ -1,0 +1,149 @@
+.buildFuture {
+  display: flex;
+  padding: 3rem calc((100vw - 1300px) / 2);
+  height: 100%;
+}
+
+.buildFuture__left {
+  width: 28%;
+  margin-top: 4rem;
+  order: 1;
+}
+
+.buildFuture__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.buildFuture__whiteHeading {
+  color: white;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.buildFuture__colorHeading {
+  font-size: 42px;
+  font-weight: bold;
+  background-color: #d96ff3;
+  background-image: linear-gradient(45deg, #874a96, #ff95f1);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.buildFuture__left > p {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.buildFuture__right {
+  width: 72%;
+  order: 2;
+}
+
+.buildFuture__right > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  margin: 1rem;
+}
+
+.btn {
+  background-color: var(--background-color);
+  color: rgb(148, 203, 255);
+  padding: 0.5em 1em;
+  font-size: large;
+  border: 1px solid rgb(201, 64, 201);
+  border-radius: 10px;
+  height: 3rem;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+
+  --background-color: #3d104e;
+  --border-size: 2px;
+  --accent-color: rgb(103, 6, 122);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn {
+    animation: btn-float infinite 2.5s ease-in-out;
+  }
+}
+
+@keyframes btn-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--accent-color);
+
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before {
+  border-radius: 10px;
+  transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover {
+  color: white;
+}
+
+.fa-discord {
+  font-size: 30px !important;
+  background: transparent;
+  margin-right: 10px;
+}
+
+.buildFuture__Slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .buildFuture {
+    flex-direction: column;
+  }
+
+  .buildFuture__left {
+    order: 2;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .buildFuture__right {
+    order: 1;
+    width: 100%;
+  }
+}

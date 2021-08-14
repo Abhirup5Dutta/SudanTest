@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.testimonials__heading {
+  font-family: "Leckerli One", cursive;
+  text-align: center;
+  font-size: 90px;
+  font-style: italic;
+  font-weight: bolder;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* background-color: #d96ff3; */
+  background-image: linear-gradient(45deg, #4a8d96, #e45ed2);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.testimonials__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.testimonials__people {
+  position: relative;
+}
+
+.testimonials__peoplebgHexagon {
+  width: 230px;
+  height: 440px;
+  background-position: center;
+  background-color: aqua;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  margin-top: 7px;
+}
+
+.testimonials__peoplebgHexagonImg {
+  width: 230px;
+  height: 440px;
+  background-position: center;
+  background-color: aqua;
+  overflow: hidden;
+  visibility: hidden;
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  z-index: 2;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.testimonials__peopleHexagonIn {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-color: aqua;
+  transform: rotate(60deg);
+  overflow: hidden;
+}
+
+.testimonials__peopleHexagonInImg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-color: aqua;
+  transform: rotate(60deg);
+  overflow: hidden;
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.testimonials__peopleHexagonBG {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-color: rgb(100, 185, 255);
+  transform: rotate(60deg);
+  visibility: visible;
+}
+
+.testimonials__peopleHexagonImg {
+  width: 100%;
+  height: 100%;
+  /* background-size: 100% 50%; */
+  background-position: center;
+  transform: rotate(60deg);
+  visibility: visible;
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.testimonials__message {
+  width: 60%;
+  height: 30%;
+  border: none;
+  background-color: rgb(195, 219, 211);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 7rem;
+  margin-right: 8rem;
+  position: relative;
+  box-shadow: 4px 4px 8px 0px rgba(168, 212, 205, 0.5);
+}
+
+.testimonials__view {
+  font-weight: 450;
+  margin-bottom: 10px;
+}
+
+.testimonials__name {
+  /* border: 2px solid rgb(10, 37, 112); */
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(111, 33, 114);
+  font-style: italic;
+  color: white;
+  box-shadow: 0px 4px 8px 1px rgba(109, 43, 129, 0.5);
+}
+
+.testimonials__message:before {
+  content: " ";
+  width: 0px;
+  height: 40.2px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 40px solid rgb(195, 219, 211);
+  border-left: 10px solid transparent;
+  position: absolute;
+  right: 100%;
+  top: 40.4%;
+}
+
+.testimonials__message:after {
+  content: " ";
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 42px solid rgb(195, 219, 211);
+  border-left: 10px solid transparent;
+  position: absolute;
+  right: 105.3%;
+  top: 44.6%;
+}
+
+.testimonials__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials {
+    margin-top: 2rem;
+  }
+
+  .testimonials__peoplebgHexagon {
+    width: 100px;
+    height: 310px;
+    margin-left: 4rem;
+  }
+
+  .testimonials__peoplebgHexagonImg {
+    width: 100px;
+    height: 310px;
+    margin-left: 4.4rem;
+  }
+
+  .testimonials__heading {
+    font-size: 60px;
+    /* width: 80%;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .testimonials__body {
+    justify-content: center;
+    padding: 0.3rem;
+    /* align-items: center; */
+  }
+
+  .testimonials__message:before {
+    display: none;
+  }
+
+  .testimonials__message:after {
+    display: none;
+  }
+
+  .testimonials__message {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7.7rem;
+    padding-top: 6rem;
+  }
+}

@@ -1,0 +1,97 @@
+.mission {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.mission__head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.mission__our {
+  color: white;
+  font-size: 60px;
+}
+
+.mission__mission {
+  background-color: #d96ff3;
+  background-image: linear-gradient(45deg, #874a96, #ff95f1);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 60px;
+}
+
+.mission > p {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.mission__body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mission__awareness,
+.mission__scholarship,
+.mission__mentor,
+.mission__diversity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 20px;
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 20px;
+  /* box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); */
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.mission__awareness:hover,
+.mission__scholarship:hover,
+.mission__mentor:hover,
+.mission__diversity:hover {
+  transform: translateY(20px);
+  background: #874a96;
+  /* border: 1px solid #874a96; */
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mission__body {
+    flex-direction: column;
+  }
+
+  .mission__our,
+  .mission__mission {
+    font-size: 65px;
+  }
+
+  .mission > p {
+    font-size: 25px;
+  }
+
+  .mission__awareness,
+  .mission__scholarship,
+  .mission__mentor,
+  .mission__diversity {
+    width: 95%;
+  }
+
+  .mission__awareness > p,
+  .mission__scholarship > p,
+  .mission__mentor > p,
+  .mission__diversity > p {
+    font-size: 15px;
+  }
+}
